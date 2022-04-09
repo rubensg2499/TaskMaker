@@ -17,7 +17,7 @@ class SQLiteHelper
     {
         $this->db_object = $_db_object;
     }
-    public function create_table($table)
+    public function execute($table)
     {
         if ($this->db_object) {
             $this->db_object->exec($table);
@@ -25,10 +25,6 @@ class SQLiteHelper
         } else {
             return false;
         }
-    }
-
-    public function drop_table($table)
-    {
     }
 
     public function insert($table, $values)
