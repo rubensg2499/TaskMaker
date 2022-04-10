@@ -24,9 +24,12 @@
     const FIELD_TITLE = "title";
     const FIELD_STAGE = "stage";
     const FIELD_DESCRIPTION = "description";
+    const FIELD_COLOR = "color";
     const FIELD_EVENT_ID = "event_id";
     const FIELD_EVENT_DATE = "event_date";
     const FIELD_EVENT_TIME = "event_time";
     const FIELD_EVENT_LINK = "event_link";
 
-    const MSG_SUCCES = "Table creation success";
+    const COLOR_BLUE = "#2A59A5";
+    const COLOR_PURPLE = "#8047B9";
+    const COLOR_RED = "#BA2222";

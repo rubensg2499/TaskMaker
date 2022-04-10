@@ -7,4 +7,4 @@
 > Ejecutar el archivo setup.php desde la línea de comandos para crear la base de datos.
 `php setup.php`
 Asegurarse que tiene agregado php al path del sistema.
-Acceda a [TaskMaker](localhot/TaskMaker)
+Acceda a [TaskMaker](localhost/TaskMaker)
