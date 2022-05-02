@@ -6,7 +6,7 @@ $results = $db->query("SELECT * FROM Workspace");
 $workspaces = array();
 while ($row = $results->fetchArray()) {
     $w = new Workspace();
-    $w->setWokspace_id($row['workspace_id']);
+    $w->setWorkspace_id($row['workspace_id']);
     $w->setName($row['name']);
     $w->setDescription($row['description']);
     $w->setColor($row['color']);

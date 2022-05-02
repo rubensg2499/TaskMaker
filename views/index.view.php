@@ -33,7 +33,7 @@
                           <div class="card-body">
                             <h5 class="card-title"><?php echo $workspace->getName(); ?></h5>
                             <p class="card-text"><?php echo $workspace->getDescription(); ?></p>
-                            <a href="controllers/kanban.php?workspace=<?php echo $workspace->getWokspace_id(); ?>" class="btn btn-light float-end" style="background-color:<?php echo $colors[$workspace->getColor()] ?>; border-color:<?php echo $colors[$workspace->getColor()] ?>; color: white;">Abrir</a>
+                            <a href="controllers/kanban.php?workspace=<?php echo $workspace->getWorkspace_id(); ?>" class="btn btn-light float-end" style="background-color:<?php echo $colors[$workspace->getColor()] ?>; border-color:<?php echo $colors[$workspace->getColor()] ?>; color: white;">Abrir</a>
                           </div>
                         </div>
                     </div>
@@ -42,6 +42,5 @@
         </div>
     </body>
     <script src="js/bootstrap.min.js" charset="utf-8"></script>
-    <script src="js/add_form_workspace.js" charset="utf-8"></script>
     </script>
 </html>
