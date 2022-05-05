@@ -27,5 +27,5 @@
       <br><br>
       <input type="hidden" name="workspace_id" value="<?php echo $workspace->getWorkspace_id(); ?>">
       <input type="submit" name="submit" class="btn btn-success" value="Actualizar">
-      <a href="Workspace/delete.php" class="btn btn-danger">Eliminar</a>
+      <a href="#" onclick="delete_record(<?php echo $workspace->getWorkspace_id(); ?>)" class="btn btn-danger">Eliminar</a>
 </form>

@@ -80,8 +80,8 @@
                                 <h5 class="card-title"><?php echo $task->getTitle(); ?></h5>
                                 <p class="card-text"><?php echo $task->getDescription(); ?></p>
                                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                  <a href="Task/update.php?action=move_to_right&task=<?php echo $task->getTask_id(); ?>" class="btn btn-light" title="Mover a la derecha"><img src="<?php echo "../assets/images/derecha.svg"; ?>" alt="Mover a la derecha" width="20px" style="color: white;"></a>
-                                  <a href="Task/delete.php?task=<?php echo $task->getTask_id(); ?>" class="btn btn-light" title="Eliminar tarea"><img src="<?php echo "../assets/images/eliminar.svg"; ?>" alt="Eliminar" width="20px"></a>
+                                  <a href="Task/update.php?stage=backlog&action=move_to_right&task=<?php echo $task->getTask_id(); ?>&workspace=<?php echo $task->getWorkspace_id(); ?>" class="btn btn-light" title="Mover a la derecha"><img src="<?php echo "../assets/images/derecha.svg"; ?>" alt="Mover a la derecha" width="20px" style="color: white;"></a>
+                                  <a href="#" onclick="delete_task(<?php echo $task->getTask_id(); ?>,<?php echo $task->getWorkspace_id(); ?>)" class="btn btn-light" title="Eliminar tarea"><img src="<?php echo "../assets/images/eliminar.svg"; ?>" alt="Eliminar" width="20px"></a>
                                 </div>
                               </div>
                             </div>
@@ -98,9 +98,9 @@
                                 <h5 class="card-title"><?php echo $task->getTitle(); ?></h5>
                                 <p class="card-text"><?php echo $task->getDescription(); ?></p>
                                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                  <a href="Task/update.php?action=move_to_left&task=<?php echo $task->getTask_id(); ?>" class="btn btn-light" title="Mover a la izquierda"><img src="<?php echo "../assets/images/izquierda.svg"; ?>" alt="Mover a la izquierda" width="20px"></a>
-                                  <a href="Task/update.php?action=move_to_right&task=<?php echo $task->getTask_id(); ?>" class="btn btn-light" title="Mover a la derecha"><img src="<?php echo "../assets/images/derecha.svg"; ?>" alt="Mover a la derecha" width="20px"></a>
-                                  <a href="Task/delete.php?task=<?php echo $task->getTask_id(); ?>" class="btn btn-light" title="Eliminar tarea"><img src="<?php echo "../assets/images/eliminar.svg"; ?>" alt="Eliminar" width="20px"></a>
+                                  <a href="Task/update.php?stage=doing&action=move_to_left&task=<?php echo $task->getTask_id(); ?>&workspace=<?php echo $task->getWorkspace_id(); ?>" class="btn btn-light" title="Mover a la izquierda"><img src="<?php echo "../assets/images/izquierda.svg"; ?>" alt="Mover a la izquierda" width="20px"></a>
+                                  <a href="Task/update.php?stage=doing&action=move_to_right&task=<?php echo $task->getTask_id(); ?>&workspace=<?php echo $task->getWorkspace_id(); ?>" class="btn btn-light" title="Mover a la derecha"><img src="<?php echo "../assets/images/derecha.svg"; ?>" alt="Mover a la derecha" width="20px"></a>
+                                  <a href="#" onclick="delete_task(<?php echo $task->getTask_id(); ?>,<?php echo $task->getWorkspace_id(); ?>)" class="btn btn-light" title="Eliminar tarea"><img src="<?php echo "../assets/images/eliminar.svg"; ?>" alt="Eliminar" width="20px"></a>
                                 </div>
                               </div>
                             </div>
@@ -117,8 +117,8 @@
                                 <h5 class="card-title"><?php echo $task->getTitle(); ?></h5>
                                 <p class="card-text"><?php echo $task->getDescription(); ?></p>
                                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                  <a href="Task/update.php?action=move_to_left&task=<?php echo $task->getTask_id(); ?>" class="btn btn-light" title="Mover a la izquierda"><img src="<?php echo "../assets/images/izquierda.svg"; ?>" alt="Mover a la izquierda" width="20px" style="color: white;"></a>
-                                  <a href="Task/delete.php?task=<?php echo $task->getTask_id(); ?>" class="btn btn-light" title="Eliminar tarea"><img src="<?php echo "../assets/images/eliminar.svg"; ?>" alt="Eliminar" width="20px"></a>
+                                  <a href="Task/update.php?stage=done&action=move_to_left&task=<?php echo $task->getTask_id(); ?>&workspace=<?php echo $task->getWorkspace_id(); ?>" class="btn btn-light" title="Mover a la izquierda"><img src="<?php echo "../assets/images/izquierda.svg"; ?>" alt="Mover a la izquierda" width="20px" style="color: white;"></a>
+                                  <a href="#" onclick="delete_task(<?php echo $task->getTask_id(); ?>,<?php echo $task->getWorkspace_id(); ?>)" class="btn btn-light" title="Eliminar tarea"><img src="<?php echo "../assets/images/eliminar.svg"; ?>" alt="Eliminar" width="20px"></a>
                                 </div>
                               </div>
                             </div>
@@ -128,5 +128,6 @@
             </div>
         </div>
         <script src="../js/bootstrap.min.js" charset="utf-8"></script>
+        <script src="../js/confirm_delete.js" charset="utf-8"></script>
     </body>
 </html>

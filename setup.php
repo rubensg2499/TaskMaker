@@ -36,7 +36,7 @@
             created_date DATE DEFAULT (datetime('now','localtime')),
             last_update DATE DEFAULT (datetime('now','localtime')),
             PRIMARY KEY(task_id),
-            FOREIGN KEY(workspace_id) REFERENCES Workspace(workspace_id)
+            FOREIGN KEY(workspace_id) REFERENCES Workspace(workspace_id) ON DELETE CASCADE
         );
     query;
 
