@@ -2,7 +2,7 @@
 
     require("utilities/SQLiteHelper.php");
     //Database creation
-    $db = new SQLiteConection();
+    $db = new SQLiteConection('db/TaskMaker.db');
     $handler = new SQLiteHelper($db);
 
     /*Warning: Not modify this queries.*/
@@ -19,7 +19,7 @@
             workspace_id INTEGER NOT NULL,
             name TEXT NOT NULL,
             description TEXT,
-            color TEXT,
+            color TEXT NOT NULL DEFAULT 'blue',
             created_date DATE DEFAULT (datetime('now','localtime')),
             last_update DATE DEFAULT (datetime('now','localtime')),
             PRIMARY KEY(workspace_id)
@@ -36,7 +36,7 @@
             created_date DATE DEFAULT (datetime('now','localtime')),
             last_update DATE DEFAULT (datetime('now','localtime')),
             PRIMARY KEY(task_id),
-            FOREIGN KEY(workspace_id) REFERENCES Workspace(workspace_id)
+            FOREIGN KEY(workspace_id) REFERENCES Workspace(workspace_id) ON DELETE CASCADE
         );
     query;
 

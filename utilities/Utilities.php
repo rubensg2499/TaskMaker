@@ -33,3 +33,5 @@
     const COLOR_BLUE = "#2A59A5";
     const COLOR_PURPLE = "#8047B9";
     const COLOR_RED = "#BA2222";
+
+    $colors = array('blue' => COLOR_BLUE, 'purple' => COLOR_PURPLE, 'red' => COLOR_RED);

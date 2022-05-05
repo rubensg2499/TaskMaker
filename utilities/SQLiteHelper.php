@@ -4,9 +4,9 @@ require("Utilities.php");
 
 class SQLiteConection extends SQLite3
 {
-    public function __construct()
+    public function __construct($db_name)
     {
-        $this->open(DB_NAME);
+        $this->open($db_name);
     }
 }
 
